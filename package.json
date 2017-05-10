@@ -16,7 +16,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
-    "immutable": "^3.8.1",
+    "immutable": "^4.0.0-rc.2",
     "install": "^0.9.6",
     "npm": "^4.5.0"
   }
