@@ -1,6 +1,8 @@
 import {
   List,
   Map,
+  Set,
+  Seq
 } from 'immutable';
 
 // The of() method is like a static class method.
@@ -13,7 +15,15 @@ const myMap = Map.of(
   'b', 2,
   'c', 3
 );
+const mySet = Set.of(1, 2, 3);
+const mySeq = Seq.of(1, 2, 3);
 
 // The end result is the same List/Map.
-console.log('myList', myList.get(2));
-console.log('myMap', myMap.get('c'));
+console.log('myList', myList.toJS());
+// -> myList [ 1, 2, 3 ]
+console.log('myMap', myMap.toJS());
+// -> myMap { a: 1, b: 2, c: 3 }
+console.log('mySet', mySet.toJS());
+// -> mySet [ 1, 2, 3 ]
+console.log('mySeq', mySeq.toJS());
+// -> mySeq [ 1, 2, 3 ]

@@ -1,6 +1,6 @@
 import {
   List,
-  Map,
+  Map
 } from 'immutable';
 
 // Lists can take Javascript arrays while Maps can
@@ -10,4 +10,6 @@ const myMap = Map({ a: 1, b: 2, c: 3 });
 
 // Lists and Maps have a get() method.
 console.log('myList', myList.get(1));
+// -> myList 2
 console.log('myMap', myMap.get('b'));
+// -> myMap 2
