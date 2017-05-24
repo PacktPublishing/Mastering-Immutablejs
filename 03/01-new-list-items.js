@@ -9,6 +9,6 @@ const myChangedList = myList.push(4);
 // myList is unchanged, myChangedList has the
 // new value.
 console.log('myList', myList.toJS());
-//> myList [ 1, 2, 3 ]
+// -> myList [ 1, 2, 3 ]
 console.log('myChangedList', myChangedList.toJS());
-//> myChangedList [ 1, 2, 3, 4 ]
+// -> myChangedList [ 1, 2, 3, 4 ]

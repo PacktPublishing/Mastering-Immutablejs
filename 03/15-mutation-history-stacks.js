@@ -1,4 +1,4 @@
-import { List, Map, Stack } from 'immutable';
+import { List, Stack } from 'immutable';
 
 // Names of List and Map methods that perform
 // persistent changes. These are the methods that
@@ -74,29 +74,27 @@ const historyHandler = {
           target,
           stack.count() > 1 ? stack.shift() : stack
         );
-
+    }
     // Not a persistent change method, just call it and
     // return the result.
-    } else {
-      return stack.first()[key];
-    }
-  },
-}
+    return stack.first()[key];
+  }
+};
 
 // Wraps a List instance with the historyHandler proxy.
 const myList = new Proxy(List.of(1, 2, 3), historyHandler);
 console.log('myList', myList.toJS());
-//> myList [ 1, 2, 3 ]
+// -> myList [ 1, 2, 3 ]
 
 myList.push(4);
 console.log('push(4)', myList.toJS());
-//> push(4) [ 1, 2, 3, 4 ]
+// -> push(4) [ 1, 2, 3, 4 ]
 myList.delete(0);
 console.log('delete(0)', myList.toJS());
-//> delete(0) [ 2, 3, 4 ]
+// -> delete(0) [ 2, 3, 4 ]
 myList.undo();
 console.log('undo()', myList.toJS());
-//> undo() [ 1, 2, 3, 4 ]
+// -> undo() [ 1, 2, 3, 4 ]
 myList.undo();
 console.log('undo()', myList.toJS());
-//> undo() [ 1, 2, 3 ]
+// -> undo() [ 1, 2, 3 ]

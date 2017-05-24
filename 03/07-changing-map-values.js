@@ -8,6 +8,6 @@ const myMap = Map.of('one', 1);
 const myChangedMap = myMap.set('one', 'one');
 
 console.log('myMap', myMap.toJS());
-//> myMap { one: 1 }
+// -> myMap { one: 1 }
 console.log('myChangedMap', myChangedMap.toJS());
-//> myChangedMap { one: 'one' }
+// -> myChangedMap { one: 'one' }

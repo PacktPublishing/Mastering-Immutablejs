@@ -9,7 +9,8 @@ const empty = (collection) => {
   if (collection instanceof Map) {
     return Map();
   }
-}
+  return null;
+};
 
 // List and Map instances.
 const myList = List.of(1, 2);
@@ -21,10 +22,10 @@ const myEmptyList = empty(myList);
 const myEmptyMap = empty(myMap);
 
 console.log('myList', myList.toJS());
-//> myList [ 1, 2 ]
+// -> myList [ 1, 2 ]
 console.log('myEmptyList', myEmptyList.toJS());
-//> myEmptyList []
+// -> myEmptyList []
 console.log('myMap', myMap.toJS());
-//> myMap { one: 1, two: 2 }
+// -> myMap { one: 1, two: 2 }
 console.log('myEmptyMap', myEmptyMap.toJS());
-//> myEmptyMap {}
+// -> myEmptyMap {}

@@ -8,6 +8,6 @@ const myList = List.of(1);
 const myChangedList = myList.set(0, 2);
 
 console.log('myList', myList.toJS());
-//> myList [ 1 ]
+// -> myList [ 1 ]
 console.log('myChangedList', myChangedList.toJS());
-//> myChangedList [ 2 ]
+// -> myChangedList [ 2 ]
