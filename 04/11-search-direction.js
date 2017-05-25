@@ -1,10 +1,10 @@
 import { List } from 'immutable';
 
+const myList = List.of('apples', 'bananas', 'cherries', 'chocolate');
+
 // A search predicate that looks for items that start
 // with "ch".
 const predicate = s => s.startsWith('ch');
-
-const myList = List.of('apples', 'bananas', 'cheries', 'chocolate');
 
 // Finding a single item in an ordered list starting from
 // right to left.
@@ -20,8 +20,8 @@ const myFilteredList = myList.reduceRight(
 );
 
 console.log('myList', myList.toJS());
-// -> myList [ 'apples', 'bananas', 'cheries', 'chocolate' ]
+// -> myList [ 'apples', 'bananas', 'cherries', 'chocolate' ]
 console.log('myFoundItem', myFoundItem);
 // -> myFoundItem chocolate
 console.log('myFilteredList', myFilteredList.toJS());
-// -> myFilteredList [ 'cheries', 'chocolate' ]
+// -> myFilteredList [ 'cherries', 'chocolate' ]

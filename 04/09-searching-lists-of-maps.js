@@ -1,12 +1,11 @@
 import {
-  is as _is,
   List,
   Map
 } from 'immutable';
 
 // A utility for creating callback functions that use
-// Immutable.js is() for equality checking.
-const is = a => b => _is(a, b);
+// Collection.equals() for equality checking.
+const is = a => b => a.equals(b);
 
 const myList = List.of(
   Map.of('one', 1),
