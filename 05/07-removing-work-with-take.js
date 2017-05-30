@@ -12,14 +12,14 @@ const myRange = Range();
 myRange
   .filter(predicate)
   .take(5)
-  .forEach(item => {
+  .forEach((item) => {
     console.log('myRange (filter then take)', item);
   });
-// -> myRange (filter then take) 1
-// -> myRange (filter then take) 3
-// -> myRange (filter then take) 5
-// -> myRange (filter then take) 7
-// -> myRange (filter then take) 9
+  // -> myRange (filter then take) 1
+  // -> myRange (filter then take) 3
+  // -> myRange (filter then take) 5
+  // -> myRange (filter then take) 7
+  // -> myRange (filter then take) 9
 
 // 5 items are taken from the sequence before
 // the filter() is applied. This means that the
@@ -28,8 +28,8 @@ myRange
 myRange
   .take(5)
   .filter(predicate)
-  .forEach(item => {
+  .forEach((item) => {
     console.log('myRange (take then filter)', item);
   });
-// -> myRange (take then filter) 1
-// -> myRange (take then filter) 3
+  // -> myRange (take then filter) 1
+  // -> myRange (take then filter) 3

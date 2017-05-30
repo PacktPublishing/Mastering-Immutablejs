@@ -23,27 +23,27 @@ myList
   .toSeq()
   .filter(predicate)
   .forEach(item => console.log('myList', item));
-// -> filtering 1
-// -> myList 1
-// -> filtering 2
-// -> filtering 3
-// -> myList 3
-// -> filtering 4
-// -> filtering 5
-// -> myList 5
-// -> filtering 6
+  // -> filtering 1
+  // -> myList 1
+  // -> filtering 2
+  // -> filtering 3
+  // -> myList 3
+  // -> filtering 4
+  // -> filtering 5
+  // -> myList 5
+  // -> filtering 6
 
 // We get identical results with maps.
 myMap
   .toSeq()
   .filter(predicate)
   .forEach(item => console.log('myMap', item));
-// -> filtering 1
-// -> myMap 1
-// -> filtering 2
-// -> filtering 3
-// -> myMap 3
-// -> filtering 4
-// -> filtering 5
-// -> myMap 5
-// -> filtering 6
+  // -> filtering 1
+  // -> myMap 1
+  // -> filtering 2
+  // -> filtering 3
+  // -> myMap 3
+  // -> filtering 4
+  // -> filtering 5
+  // -> myMap 5
+  // -> filtering 6
