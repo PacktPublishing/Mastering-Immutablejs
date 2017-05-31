@@ -8,6 +8,10 @@ const myList = List.of(2, 1, 4, 3);
 // method could have unintended consequences.
 const myReversedList = myList.reverse();
 
+// If we want the expected behavior of reverse(),
+// we have to sort() the collection first.
+const mySortedReversedList = myList.sort().reverse();
+
 // Sorting backwards will actually perform a sort,
 // instead of just reversing the current order.
 const myBackwardSortedList = myList.sortBy(i => -i);
@@ -17,6 +21,9 @@ console.log('myList', myList.toJS());
 
 console.log('myReversedList', myReversedList.toJS());
 // -> myReversedList [ 3, 4, 1, 2 ]
+
+console.log('mySortedReversedList', mySortedReversedList.toJS());
+// -> mySortedReversedList [ 4, 3, 2, 1 ]
 
 console.log('myBackwardSortedList', myBackwardSortedList.toJS());
 // -> myBackwardSortedList [ 4, 3, 2, 1 ]

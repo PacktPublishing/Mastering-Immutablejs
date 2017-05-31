@@ -1,4 +1,4 @@
-import { Map, OrderedMap } from 'immutable';
+import { Map } from 'immutable';
 
 const myMap = Map.of(
   'three', 3,
@@ -11,13 +11,14 @@ const myMap = Map.of(
 // to preserve the sort order, we need to convert
 // it to an ordered map.
 const mySortedMap = myMap
-  .sort()
-  .toOrderedMap();
+  .toOrderedMap()
+  .sort();
 
 // Using the sort() method sorts maps by value. Using
 // sortBy(), we can pass a simple callback that allows
 // us to sort by key.
 const mySortedByKeyMap = myMap
+  .toOrderedMap()
   .sortBy((v, k) => k);
 
 myMap.forEach(
@@ -36,3 +37,11 @@ mySortedMap.forEach(
 // -> mySortedMap two => 2
 // -> mySortedMap three => 3
 // -> mySortedMap four => 4
+
+mySortedByKeyMap.forEach(
+  (v, k) => console.log('mySortedByKeyMap', `${k} => ${v}`)
+);
+// -> mySortedByKeyMap four => 4
+// -> mySortedByKeyMap one => 1
+// -> mySortedByKeyMap three => 3
+// -> mySortedByKeyMap two => 2
