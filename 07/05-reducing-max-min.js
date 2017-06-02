@@ -46,8 +46,14 @@ const maxByRed = myList
   .get('red');
 
 console.log('minRedReduce', minRedReduce);
+// -> minRedReduce 3
 console.log('maxRedReduce', maxRedReduce);
+// -> maxRedReduce 9
 console.log('minRedMap', minRedMap);
+// -> minRedMap 3
 console.log('maxRedMap', maxRedMap);
+// -> maxRedMap 9
 console.log('minByRed', minByRed);
+// -> minByRed 3
 console.log('maxByRed', maxByRed);
+// -> maxByRed 9

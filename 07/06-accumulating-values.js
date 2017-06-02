@@ -25,7 +25,7 @@ const groupedSums = myList
   .reduce((result, v) => result
     .update('red', r => r + v.get('red'))
     .update('black', b => b + v.get('black'))
-  )
+  );
 
 console.log('myList', myList.toJS());
 // -> myList [ { red: 3, black: 4 },

@@ -10,9 +10,8 @@ const myList = List.of(
 // mapping JavaScript arrays. Here, we're producing
 // a new list and we're using get() for each map
 // item in the list to get the value we're after.
-const myMappedList = myList.map(
-  v => v.get('second')
-);
+const myMappedList = myList
+  .map(v => v.get('second'));
 
 console.log('myList', myList.toJS());
 // -> myList [

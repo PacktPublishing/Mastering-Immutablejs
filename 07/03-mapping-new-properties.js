@@ -2,7 +2,7 @@ import { List, Map } from 'immutable';
 
 // Capitalizes the first letter of a given string.
 const capitalize = s =>
-  `${s.charAt(0).toUpperCase()}${s.slice(1)}`
+  `${s.charAt(0).toUpperCase()}${s.slice(1)}`;
 
 const myList = List.of(
   Map.of('first', 'joe', 'last', 'brown', 'age', 45),
