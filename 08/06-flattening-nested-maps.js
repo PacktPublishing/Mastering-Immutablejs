@@ -1,4 +1,4 @@
-import { Map, List, Seq } from 'immutable';
+import { Map } from 'immutable';
 
 const myMap = Map.of(
   'first', 1,
