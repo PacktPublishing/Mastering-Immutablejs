@@ -1,4 +1,4 @@
-import { List, Map, is } from 'immutable';
+import { List, Map } from 'immutable';
 
 const myList = List.of(
   Map.of('one', 1, 'two', 2),
@@ -28,11 +28,23 @@ console.log('myMutatedList', myMutatedList.toJS());
 // -> myMutatedList [ { one: 1, two: 2 },
 // ->                 { three: 3, four: 4 },
 // ->                 { five: 5, six: 6 } ]
-console.log('myList === myTransformedList', myList === myTransformedList);
+console.log(
+  'myList === myTransformedList',
+  myList === myTransformedList
+);
 // -> myList === myTransformedList false
-console.log('myList === myMutatedList', myList === myMutatedList);
+console.log(
+  'myList === myMutatedList',
+  myList === myMutatedList
+);
 // -> myList === myMutatedList true
-console.log('is(myList, myTransformedList)', is(myList, myTransformedList));
-// -> is(myList, myTransformedList) true
-console.log('is(myList, myMutatedList)', is(myList, myMutatedList));
-// -> is(myList, myMutatedList) true
+console.log(
+  'myList.equals(myTransformedList)',
+  myList.equals(myTransformedList)
+);
+// -> myList.equals(myTransformedList) true
+console.log(
+  'myList.equals(myMutatedList)',
+  myList.equals(myMutatedList)
+);
+// -> myList.equals(myMutatedList) true
