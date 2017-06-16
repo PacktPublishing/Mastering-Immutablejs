@@ -1,4 +1,4 @@
-import { List, Map } from 'immutable';
+import { List, Map, Set, Repeat } from 'immutable';
 
 const myList = List.of(
   Map.of('one', 1, 'two', 2),
@@ -24,8 +24,42 @@ myList
 // This works as expected, no more duplicates.
 myList
   .toSet()
+  .toSeq()
   .map(v => v.toJS())
   .forEach(v => console.log('toSet()', v));
   // -> toSet() { one: 1, two: 2 }
   // -> toSet() { three: 3, four: 4 }
   // -> toSet() { five: 5, six: 6 }
+
+// We can lazily remove duplicates from lists
+// by keeping track of the values that have
+// already made it through. If we see it
+// again, we can ignore it.
+const lazySet = (list) => {
+  let seen = Set();
+
+  return list
+    .toSeq()
+    .filter((v) => {
+      if (seen.includes(v)) {
+        return false;
+      }
+
+      seen = seen.add(v);
+      return true;
+    });
+};
+
+const myBigList = myList.concat(
+  Repeat(Map.of('one', 1, 'two', 2), 10000)
+);
+
+console.log('myBigList.size', myBigList.size);
+// -> myBigList.size 10005
+lazySet(myBigList)
+  .map(v => v.toJS())
+  .take(10)
+  .forEach(v => console.log('lazySet()', v));
+  // -> lazySet() { one: 1, two: 2 }
+  // -> lazySet() { three: 3, four: 4 }
+  // -> lazySet() { five: 5, six: 6 }
