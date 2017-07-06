@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Immutable.js + DOM Side Effects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="../node_modules/immutable/dist/immutable.js"></script>
+    <script src="immutable-dom.js" defer></script>
+  </head>
+  <body>
+    <template id="episode-template">
+      <li>
+        <header>
+          <h4></h4>
+        </header>
+        <section>
+          <p><strong>Date: </strong> </p>
+          <p><strong>Director: </strong> </p>
+          <p><strong>Rating: </strong> </p>
+        </section>
+      </li>
+    </template>
+    <header>
+      <h1>Immutable.js + DOM Side Effects</h1>
+      <input placeholder="filter" type="search" autofocus/>
+    </header>
+    <section>
+      <aside>
+        <section>
+          <header>
+            <h3>Filter Fields</h3>
+          </header>
+          <ul>
+            <li>
+              <label>
+                Title
+                <input type="checkbox" name="title" checked/>
+              </label>
+            </li>
+            <li>
+              <label>
+                Date
+                <input type="checkbox" name="date"/>
+              </label>
+            </li>
+            <li>
+              <label>
+                Director
+                <input type="checkbox" name="director"/>
+              </label>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <header>
+            <h3>Rating</h3>
+          </header>
+          <label>
+            7
+            <input type="range" min="1" max="10" value="7" name="rating"/>
+          </label>
+        </section>
+      </aside>
+      <section>
+        <header>
+          <h3>Results</h3>
+        </header>
+        <ul id="results"></ul>
+      </section>
+    </section>
+  </body>
+</html>
