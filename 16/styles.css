@@ -1,0 +1,40 @@
+body {
+  font-family: arial, sans-serif;
+  margin: 8em;
+  color: #444;
+  background: #eee
+}
+
+a:target {
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+section#results ul li {
+  background: #ccced1;
+  border: 1px solid;
+  padding: 0.8em;
+  margin: 1em 0;
+}
+
+section#results ul li > section {
+  display: flex;
+  justify-content: space-between;
+}
+
+section#results p {
+  font-size: 0.9em;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+}
+
+form section {
+
+}
