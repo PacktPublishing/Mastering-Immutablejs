@@ -10,11 +10,11 @@ const prop = p => map => map.get(p);
 const comp = (order, ...props) => (a, b) => {
   for (const p of props) {
     if (a.get(p) > b.get(p)) {
-      return order * -1;
+      return order * 1;
     }
 
     if (a.get(p) < b.get(p)) {
-      return order * 1;
+      return order * -1;
     }
   }
   return 0;
