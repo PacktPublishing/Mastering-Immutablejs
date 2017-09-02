@@ -58,8 +58,7 @@ console.log('myBigList.size', myBigList.size);
 // -> myBigList.size 10005
 lazySet(myBigList)
   .map(v => v.toJS())
-  .take(10)
+  .take(2)
   .forEach(v => console.log('lazySet()', v));
   // -> lazySet() { one: 1, two: 2 }
   // -> lazySet() { three: 3, four: 4 }
-  // -> lazySet() { five: 5, six: 6 }
