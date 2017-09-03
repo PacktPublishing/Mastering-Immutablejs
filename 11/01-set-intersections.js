@@ -10,7 +10,6 @@ const myIntersection = myFirstSet.intersect(mySecondSet);
 // be in the correct order since we're converting
 // it to an ordered set before intersecting.
 const myOrderedIntersection = myFirstSet
-  .toOrderedSet()
   .sort()
   .intersect(mySecondSet);
 
