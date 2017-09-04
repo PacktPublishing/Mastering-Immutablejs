@@ -6,7 +6,7 @@ const App = (initialState, sideEffects) => { // eslint-disable-line no-unused-va
   state.forEach((v, k) => {
     List()
       .concat(sideEffects.get(k))
-      .forEach(sideEffect => sideEffect(state.get(k)));
+      .forEach(sideEffect => sideEffect(v));
   });
 
   return (updater) => {
@@ -16,7 +16,7 @@ const App = (initialState, sideEffects) => { // eslint-disable-line no-unused-va
       if (v !== state.get(k)) {
         List()
           .concat(sideEffects.get(k))
-          .forEach(sideEffect => sideEffect(newState.get(k)));
+          .forEach(sideEffect => sideEffect(v));
       }
     });
 
