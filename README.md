@@ -29,3 +29,7 @@ npm run babel-node 02/01-available-types.js
 
 Chapters 14 and 16 have examples that only work in the browser. For these,
 you can just open up the HTML files in these directories right in the browser.
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781788395113">https://packt.link/free-ebook/9781788395113 </a> </p>
